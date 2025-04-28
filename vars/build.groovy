@@ -4,6 +4,6 @@ def call(imageName, dockerFileLocation){
   sh "sudo usermod -aG docker $USER && newgrp docker"
   sh "cd django-todo-cicd/"
   sh "pwd"
-  sh "docker build -t "${imageName}" "${dockerFileLocation}"
+  sh "docker build -t ${imageName} ${dockerFileLocation}"
   echo "image built"
 }
